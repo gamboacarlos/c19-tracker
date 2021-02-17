@@ -1,9 +1,7 @@
-import './styles/index.scss'
+import * as React from 'react';
+import { render } from 'react-dom'
+import App from './components/App'
+import './styles/global.scss'
 
-const num = 99
-console.log(num)
 
-function sound(loud: string) {
-  console.log(loud)
-}
-sound("Listo")
+render(<App />, document.getElementById("root"))
