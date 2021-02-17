@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import styles from './Titulo.module.scss'
 
 type Props = {
     children: string
@@ -6,7 +7,7 @@ type Props = {
 
 const Titulo: FC <Props> = ({children}) => {
     return (
-        <div>
+        <div className={styles.title}>
             <h1>{children}</h1>
         </div>
     )

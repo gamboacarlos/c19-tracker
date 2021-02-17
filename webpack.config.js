@@ -21,10 +21,16 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: { publicPath: "" }
           }, 
-          'css-loader', 
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          },
           'postcss-loader',
           'sass-loader'
-        ]
+        ],
       },
       {
         test: /\.(ts||tsx)$/,
@@ -54,10 +60,15 @@ module.exports = {
     )
   ],
 
-  devtool: false,
+  devtool: 'inline-source-map',
+
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
 
   devServer: {
     contentBase: './dist',
-    hot: true
   }
 }
