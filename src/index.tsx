@@ -1,8 +1,9 @@
-import './styles/index.css'
+import './styles/index.scss'
 
 const num = 99
 console.log(num)
 
-function sound (loud: string) {
+function sound(loud: string) {
   console.log(loud)
 }
+sound("Listo")

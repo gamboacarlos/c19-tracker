@@ -1,0 +1,26 @@
+@use "./variables.scss";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  html{
+    font-size: 62.5%;
+  
+    // @media ${({ theme }) => theme.breakpoints.tablet}{
+    //   font-size: 50%;
+    // }
+  }
+  
+    html,
+    body {
+    font-family: sans-serif, Arial, Helvetica;
+    color: variables.$text;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
