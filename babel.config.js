@@ -1,5 +1,5 @@
-module.exports = {
-    presets: [
-        "@babel/present-env"
-    ]
-}
+// module.exports = {
+//     presets: [
+//         "@babel/present-env"
+//     ]
+// }

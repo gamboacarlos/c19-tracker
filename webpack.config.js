@@ -1,20 +1,34 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 module.exports = {
-    mode: "development",
+  mode: 'production',
 
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                },
-            },
-        ]
-    },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.(ts||tsx||js)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader'
+        }
+      }
+    ]
+  },
 
-    devtool: false,
-    devServer: {
-        contentBase: "./dist",
-    },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
+
+  plugins: [new MiniCssExtractPlugin()],
+
+  devtool: false,
+
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  }
 }
