@@ -1,9 +1,9 @@
 {
-  "name": "webpack5-base",
+  "name": "c19-tracker",
   "version": "1.0.0",
   "description": "Webpack 5 boilerplate",
   "main": "index.tsx",
-  "repository": "https://github.com/gamboacarlos/webpack5-base.git",
+  "repository": "https://github.com/gamboacarlos/c19-tracker.git",
   "author": "Carlos Gamboa",
   "license": "MIT",
   "scripts": {
