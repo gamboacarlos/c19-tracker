@@ -1,1 +1,1 @@
-export { default as Titulo } from './Titulo/Titulo'
+export { default as Titulo } from './Titulo/Titulo';
