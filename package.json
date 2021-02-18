@@ -1,7 +1,7 @@
 {
   "name": "c19-tracker",
   "version": "1.0.0",
-  "description": "Webpack 5 boilerplate",
+  "description": "Covid-19 live tracker around the world",
   "main": "index.tsx",
   "repository": "https://github.com/gamboacarlos/c19-tracker.git",
   "author": "Carlos Gamboa",
