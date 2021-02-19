@@ -11,6 +11,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|ttf)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+        },
+        },
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource"
       },
@@ -28,6 +38,7 @@ module.exports = {
               modules: true
             }
           },
+          'resolve-url-loader',
           'postcss-loader',
           'sass-loader'
         ],
