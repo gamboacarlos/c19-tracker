@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { Titulo } from './atoms';
+import { MainTitle } from './atoms';
+import { Layout } from './templates';
 
 const App: FC = () => (
   <>
-    <h1>React Ready</h1>
-    <img src={require('../../public/images/logo.png')} alt="logo" />
-    <img src={require('../../public/images/nologo.png')} alt="logo" />
-    <Titulo>C19</Titulo>
+    <Layout>
+      <MainTitle>Track the covid-19 all over the world...</MainTitle>
+    </Layout>
   </>
 );
 

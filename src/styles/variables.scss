@@ -1,20 +1,23 @@
 @import "./mixins.scss";
+
+// Colors
+$text: hsl(0, 0%, 10%);
+$primary: hsl(130, 100%, 84%);
+$secundary: hsl(69, 100%, 74%);
+$grey1: hsl(0, 0%, 93%);
+
+//Fonts
 @include font('Gilroy-ExtraBold', '../fonts/GilroyExtraBold/font.woff', 'woff', '900');
 @include font('Roboto-Black', '../fonts/Roboto/Roboto-Black.woff', 'woff', '900');
 @include font('Roboto-Bold', '../fonts/Roboto/Roboto-Bold.woff', 'woff', '700');
 @include font('Roboto-Regular', '../fonts/Roboto/Roboto-Regular.woff', 'woff', '400');
 @include font('Roboto-Light', '../fonts/Roboto/Roboto-Light.woff', 'woff', '300');
+@include font('Monserrat-Black', '../fonts/MonserratBlack/Montserrat-Black.woff', 'woff', '900');
+@include font('RobotoSlab-Black', '../fonts/RobotoSlab/RobotoSlab-Black.woff', 'woff', '900');
 
-
-// Colors
-$text: hsl(0, 0%, 20%);
-$primary: hsl(86, 100%, 91%);
-$secundary: hsl(101, 100%, 81%);
-$grey1: hsl(0, 0%, 93%);
-
-//Fonts
 $logoFont: 'Gilroy-ExtraBold';
-$heroFont: 'Roboto-Black';
+$logoFont2: 'Monserrat-Black';
+$heroFont: 'RobotoSlab-Black';
 $primaryFont: 'Roboto-Regular';
 $primaryFontBold: 'Roboto-Bold';
 $secundaryFont: 'Roboto-Light';
