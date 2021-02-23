@@ -3,6 +3,14 @@
 .title {
   color: $text;
   font-family: $heroFont;
-  font-size: 7.2rem;
-  letter-spacing: -.2rem;
+  font-size: 10rem;
+  line-height: 8.4rem;
+  letter-spacing: -0.3rem;
+  margin-bottom: 5%;
+
+  @include mobile() {
+    font-size: 6.5rem;
+    line-height: 5.7rem;
+    letter-spacing: -0.2rem;
+  }
 }

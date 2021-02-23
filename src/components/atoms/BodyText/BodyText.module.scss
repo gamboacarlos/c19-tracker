@@ -1,0 +1,5 @@
+@import './../../../styles/variables.scss';
+
+.bText{
+    @include bodyText($primaryFontBold, 1.8rem);
+}

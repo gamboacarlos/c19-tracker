@@ -1,7 +1,14 @@
 @import './../../../styles/variables.scss';
 
-.pTitle{
-    font-family: $primaryFontBold;
-    font-size: 3.6rem;
-    letter-spacing: -.3rem;
+.pTitle {
+  font-family: $primaryFontBold;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.15rem;
+
+  @include tablet() {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -0.1rem;
+  }
 }

@@ -1,0 +1,45 @@
+@import './../../../styles/variables.scss';
+
+
+.dateWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: .2rem solid $text;
+  }
+  .dateArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  
+    p:first-child {
+      @include bodyText($primaryFontBlack, 5rem);
+      letter-spacing: -0.15rem;
+
+    @include mobile() {
+      @include bodyText($primaryFontBlack, 3rem);
+            letter-spacing: -0.1rem;
+    }
+    }
+    p:nth-child(2) {
+      @include bodyText($primaryFontBlack, 5rem);
+      letter-spacing: -0.35rem;
+
+      @include mobile() {
+        @include bodyText($primaryFontBlack, 3rem);
+              letter-spacing: -0.2rem;
+      }
+    }
+    span {
+      @include bodyText($primaryFontBlack, 5rem);
+      letter-spacing: -0.5rem;
+
+      @include mobile() {
+        @include bodyText($primaryFontBlack, 3rem);
+              letter-spacing: -0.2rem;
+      }
+    }
+
+  }

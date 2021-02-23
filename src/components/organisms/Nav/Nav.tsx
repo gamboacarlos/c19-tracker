@@ -7,8 +7,12 @@ const Nav: FC = () => {
     <div className={styles.navWrapper}>
       <nav className={styles.navContent}>
         <Logo />
-        <button type="submit">test</button>
+        <div className={styles.navDecoration}>
+          <span>Live_Tracker</span>
+          <hr />
+        </div>
       </nav>
+      <hr />
     </div>
   );
 };
