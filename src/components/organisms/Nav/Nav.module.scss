@@ -3,6 +3,7 @@
 
 .navWrapper{
    @include mainContainer(0);
+   margin-bottom: 3.5rem;
 
    hr{
     margin-top: 2px;

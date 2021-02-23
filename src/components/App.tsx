@@ -1,12 +1,9 @@
 import React, { FC } from 'react';
-import { Hero } from './organisms';
-import { Layout } from './templates';
+import { HomePage } from './pages';
 
 const App: FC = () => (
   <>
-    <Layout>
-      <Hero />
-    </Layout>
+    <HomePage />
   </>
 );
 

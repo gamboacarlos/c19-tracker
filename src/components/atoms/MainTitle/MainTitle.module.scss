@@ -1,16 +1,38 @@
 @import '../../../styles/variables.scss';
 
 .title {
+  position: relative;
+  width: 48.5%;
   color: $text;
   font-family: $heroFont;
   font-size: 10rem;
   line-height: 8.4rem;
   letter-spacing: -0.3rem;
-  margin-bottom: 5%;
+
+  p {
+    @include mobile() {
+      margin-right: 1.5rem;
+    }
+  }
+  hr {
+    @include separator;
+    margin-top: 1.5rem;
+  }
 
   @include mobile() {
+    width: 100%;
     font-size: 6.5rem;
     line-height: 5.7rem;
     letter-spacing: -0.2rem;
+    margin-bottom: 1%;
   }
+}
+.hTitleTopRightDecoration {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 2rem solid $text;
+  border-left: 2rem solid transparent;
 }
