@@ -5,6 +5,7 @@
   font-size: 3.6rem;
   line-height: 3.6rem;
   letter-spacing: -0.15rem;
+  white-space: nowrap;
 
   @include mobile() {
     font-size: 3rem;

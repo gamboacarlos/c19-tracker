@@ -7,10 +7,8 @@ const Nav: FC = () => {
     <div className={styles.navWrapper}>
       <nav className={styles.navContent}>
         <Logo />
-        <div className={styles.navDecoration}>
-          <span>Live_Tracker</span>
-          <hr />
-        </div>
+
+        {/* <div className={styles.navDecoration} /> */}
       </nav>
       <hr />
     </div>

@@ -11,15 +11,16 @@ $grey1: hsl(0, 0%, 93%);
 @include font('Roboto-Black', '../fonts/Roboto/Roboto-Black.woff', 'woff', '900');
 @include font('Roboto-Bold', '../fonts/Roboto/Roboto-Bold.woff', 'woff', '700');
 @include font('Roboto-Regular', '../fonts/Roboto/Roboto-Regular.woff', 'woff', '400');
+@include font('Roboto-Medium', '../fonts/Roboto/Roboto-Medium.woff', 'woff', '500');
 @include font('Roboto-Light', '../fonts/Roboto/Roboto-Light.woff', 'woff', '300');
 @include font('Monserrat-Black', '../fonts/MonserratBlack/Montserrat-Black.woff', 'woff', '900');
 @include font('RobotoSlab-Black', '../fonts/RobotoSlab/RobotoSlab-Black.woff', 'woff', '900');
 
-$logoFont: 'Gilroy-ExtraBold';
-$logoFont2: 'Monserrat-Black';
+$logoFont: 'Monserrat-Black';
 $heroFont: 'RobotoSlab-Black';
 $primaryFont: 'Roboto-Regular';
+$primaryFontMedium: 'Roboto-Medium';
 $primaryFontBold: 'Roboto-Bold';
 $primaryFontBlack: 'Roboto-Black';
-$secundaryFont: 'Roboto-Light';
+$primaryFontLight: 'Roboto-Light';
 

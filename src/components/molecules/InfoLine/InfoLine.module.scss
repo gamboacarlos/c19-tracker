@@ -1,0 +1,23 @@
+@import './../../../styles/variables.scss';
+
+.infoWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: .3rem;
+  border-bottom: 0.2rem solid $text;
+  margin: 1rem 0;
+
+  p {
+    @include bodyText($primaryFontBlack, 1.8rem);
+    letter-spacing: -0.1rem;
+  }
+}
+.infoNameSection {
+  display: flex;
+align-items: center;
+  p {
+    @include bodyText($primaryFontMedium, 1.8rem);
+  }
+}

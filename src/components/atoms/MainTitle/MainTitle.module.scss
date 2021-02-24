@@ -2,12 +2,13 @@
 
 .title {
   position: relative;
-  width: 48.5%;
+  width: 100%;
   color: $text;
   font-family: $heroFont;
   font-size: 10rem;
   line-height: 8.4rem;
   letter-spacing: -0.3rem;
+  grid-area: mTitle;
 
   p {
     @include mobile() {
@@ -15,16 +16,14 @@
     }
   }
   hr {
-    @include separator;
-    margin-top: 1.5rem;
+    @include separator(0.2rem);
+    margin-top: 2rem;
   }
 
   @include mobile() {
-    width: 100%;
     font-size: 6.5rem;
     line-height: 5.7rem;
     letter-spacing: -0.2rem;
-    margin-bottom: 1%;
   }
 }
 .hTitleTopRightDecoration {

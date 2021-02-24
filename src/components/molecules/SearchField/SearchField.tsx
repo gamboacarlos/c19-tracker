@@ -4,7 +4,7 @@ import styles from './SearchField.module.scss';
 
 const SearchField: FC = () => {
   return (
-    <div className={styles.sField}>
+    <div className={styles.sFieldWrapper}>
       <PrimaryTitle>Search by country</PrimaryTitle>
       <div className={styles.sInputs}>
         <Input type="text" />
