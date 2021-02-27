@@ -1,0 +1,5 @@
+@import './../../../styles/variables.scss';
+
+.anchor{
+    @include bodyText($primaryFontMedium, 1.2rem)
+}

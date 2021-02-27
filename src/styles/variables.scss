@@ -4,7 +4,7 @@
 $text: hsl(0, 0%, 10%);
 $primary: hsl(130, 100%, 84%);
 $secundary: hsl(69, 100%, 74%);
-$grey1: hsl(0, 0%, 93%);
+$grey: hsl(0, 0%, 93%);
 
 //Fonts
 @include font('Gilroy-ExtraBold', '../fonts/GilroyExtraBold/font.woff', 'woff', '900');

@@ -10,4 +10,14 @@
   font-family: $primaryFontBold;
   font-size: 3rem;
   padding: 0 2rem;
+  cursor: pointer;
+  transition: 300ms ;
+
+}
+
+.pButton:hover {
+  background-color: yellow;
+}
+.pButton:active {
+  background-color: $primary;
 }

@@ -6,7 +6,7 @@
   color: $text;
   font-family: $heroFont;
   font-size: 10rem;
-  line-height: 8.4rem;
+  line-height: 9rem;
   letter-spacing: -0.3rem;
   grid-area: mTitle;
 
@@ -16,8 +16,8 @@
     }
   }
   hr {
-    @include separator(0.2rem);
-    margin-top: 2rem;
+    @include separator(0.3rem);
+    margin-top: 2.5rem;
   }
 
   @include mobile() {

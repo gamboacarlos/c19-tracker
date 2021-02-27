@@ -8,20 +8,23 @@
   grid-template-rows: repeat(4, auto);
   grid-gap: 3rem;
   grid-template-areas:
-  'mTitle mDate'
-  'mTitle iModule'
-  'sField iModule';
-  
-  @include mobile(){
+    'mTitle mDate'
+    'mTitle iModule'
+    'sField iModule'
+    'nMention iModule';
+
+  @include mobile() {
     grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 2rem;
     grid-template-areas:
-    'mTitle'
-    'mTitle'
-    'mDate'
-    'sField'
-    'iModule'
-    'iModule';
+      'mTitle'
+      'mTitle'
+      'mDate'
+      'sField'
+      'iModule'
+      'iModule'
+      'nMention';
   }
 }
 

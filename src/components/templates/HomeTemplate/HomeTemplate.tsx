@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Layout } from '..';
 import { MainTitle } from '../../atoms';
-import { InfoLine, MainDate, SearchField } from '../../molecules';
+import { MainDate, NarrativaMention, SearchField } from '../../molecules';
 import { InfoModule } from '../../organisms';
 import styles from './HomeTemplate.module.scss';
 
@@ -17,6 +17,7 @@ const HomeTemplate: FC<Props> = ({ mainTitleData }) => {
         <MainDate />
         <SearchField />
         <InfoModule />
+        <NarrativaMention />
       </div>
     </Layout>
   );

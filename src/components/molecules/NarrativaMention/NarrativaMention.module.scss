@@ -1,0 +1,44 @@
+@import './../../../styles/variables.scss';
+
+.nmWrapper {
+  width: 100%;
+  padding: 1.4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  grid-area: nMention;
+  border-top: solid 0.3rem $text;
+
+  img {
+    width: 20%;
+    height: auto;
+    margin: 0.5rem 0;
+  }
+  p {
+    @include bodyText($primaryFontBold, 1.2rem);
+  }
+
+  @include mobile() {
+    img {
+      width: 35%;
+    }
+  }
+}
+
+.nmAnchors {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+
+  a {
+    margin-bottom: 0.2rem;
+  }
+
+  @include mobile() {
+    margin-top: 0.8rem;
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+}
