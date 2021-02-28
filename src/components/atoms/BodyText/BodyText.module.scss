@@ -1,4 +1,6 @@
 @import './../../../styles/variables.scss';
+@import './../../../styles/mixins.scss';
+
 
 .bText{
     @include bodyText($primaryFontBold, 1.8rem);

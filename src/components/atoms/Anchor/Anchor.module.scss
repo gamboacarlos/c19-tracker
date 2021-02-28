@@ -1,4 +1,5 @@
 @import './../../../styles/variables.scss';
+@import './../../../styles/mixins.scss';
 
 .anchor{
     @include bodyText($primaryFontMedium, 1.2rem)
