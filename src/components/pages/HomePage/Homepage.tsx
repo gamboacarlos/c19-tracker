@@ -1,4 +1,7 @@
+/* eslint-disable camelcase */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { FC } from 'react';
+import { useData } from '../../../Contexts/DataContext';
 import { HomeTemplate } from '../../templates';
 
 const HomePage: FC = () => {

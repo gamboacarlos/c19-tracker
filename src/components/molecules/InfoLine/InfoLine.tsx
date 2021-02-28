@@ -4,7 +4,7 @@ import styles from './InfoLine.module.scss';
 
 type Props = {
   name: string;
-  data: string;
+  data: number;
 };
 
 const InfoLine: FC<Props> = ({ name, data }) => {

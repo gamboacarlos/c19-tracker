@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { Layout } from '..';
 import { MainTitle } from '../../atoms';
 import { MainDate, NarrativaMention, SearchField } from '../../molecules';
-import { InfoModule } from '../../organisms';
+import { TodayInfoModule } from '../../organisms';
 import styles from './HomeTemplate.module.scss';
 
 type Props = {
@@ -16,7 +16,7 @@ const HomeTemplate: FC<Props> = ({ mainTitleData }) => {
         <MainTitle>{mainTitleData}</MainTitle>
         <MainDate />
         <SearchField />
-        <InfoModule />
+        <TodayInfoModule />
         <NarrativaMention />
       </div>
     </Layout>
@@ -24,21 +24,3 @@ const HomeTemplate: FC<Props> = ({ mainTitleData }) => {
 };
 
 export default HomeTemplate;
-// const HomeTemplate: FC<Props> = ({ mainTitleData }) => {
-//   return (
-//     <Layout>
-//       <div className={styles.hWrapper}>
-//         <div className={styles.hTitleArea}>
-//           <MainTitle>{mainTitleData}</MainTitle>
-//           <MainDate />
-//         </div>
-//         <div className={styles.hInfoArea}>
-//           <SearchField />
-//           <InfoModule />
-//         </div>
-//       </div>
-//     </Layout>
-//   );
-// };
-
-// export default HomeTemplate;
