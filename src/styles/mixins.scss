@@ -1,0 +1,55 @@
+//Breakpoints
+@mixin notebook() {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media (max-width: 980px) {
+    @content;
+  }
+}
+
+//Fonts
+@mixin font($font-family, $font-file, $font-format, $font-weight) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file) format($font-format);
+    font-weight: $font-weight;
+  }
+}
+
+//Container
+@mixin mainContainer($minHeight: 80rem) {
+  width: 100%;
+  min-height: $minHeight;
+  max-width: 1440px;
+  padding: 0 5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include mobile() {
+    padding: 0 1rem;
+  }
+}
+
+//Styles
+@mixin border() {
+  border: 0.2rem solid $text;
+  border-radius: 9px;
+}
+
+//Text
+@mixin bodyText($fontFamily, $fontSize) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+//Decorations
+@mixin separator($height){
+  width: 100%;
+  height: $height;
+  background-color: $text;
+  border-width: 0;
+}
