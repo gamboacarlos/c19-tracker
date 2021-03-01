@@ -7,7 +7,6 @@ $secundary: hsl(69, 100%, 74%);
 $grey: hsl(0, 0%, 93%);
 
 //Fonts
-@include font('Gilroy-ExtraBold', '../fonts/GilroyExtraBold/font.woff', 'woff', '900');
 @include font('Roboto-Black', '../fonts/Roboto/Roboto-Black.woff', 'woff', '900');
 @include font('Roboto-Bold', '../fonts/Roboto/Roboto-Bold.woff', 'woff', '700');
 @include font('Roboto-Regular', '../fonts/Roboto/Roboto-Regular.woff', 'woff', '400');
