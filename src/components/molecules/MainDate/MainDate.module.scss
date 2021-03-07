@@ -15,29 +15,29 @@
   align-items: flex-end;
 
   p:first-child {
-    @include bodyText($primaryFontBlack, 4rem);
+    @include bodyText($primaryFontBlack, 3.6rem);
     letter-spacing: -0.15rem;
 
     @include mobile() {
-      @include bodyText($primaryFontBlack, 2.5rem);
+      @include bodyText($primaryFontBlack, 3rem);
       letter-spacing: -0.1rem;
     }
   }
   p:nth-child(2) {
-    @include bodyText($primaryFontBlack, 4rem);
+    @include bodyText($primaryFontBlack, 3.6rem);
     letter-spacing: -0.35rem;
 
     @include mobile() {
-      @include bodyText($primaryFontBlack, 2.5rem);
+      @include bodyText($primaryFontBlack, 3rem);
       letter-spacing: -0.2rem;
     }
   }
   span {
-    @include bodyText($primaryFontBlack, 4rem);
+    @include bodyText($primaryFontBlack, 3.6rem);
     letter-spacing: -0.5rem;
 
     @include mobile() {
-      @include bodyText($primaryFontBlack, 2.5rem);
+      @include bodyText($primaryFontBlack, 3rem);
       letter-spacing: -0.2rem;
     }
   }

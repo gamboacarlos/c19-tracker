@@ -11,7 +11,7 @@
     'mTitle mDate'
     'mTitle iModule'
     'sField iModule'
-    'nMention iModule';
+    'nMention nMention';
 
   @include mobile() {
     grid-template-columns: 1fr;
@@ -27,66 +27,3 @@
       'nMention';
   }
 }
-
-// .hTitleArea {
-//   position: relative;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: flex-start;
-//   margin-bottom: 2rem;
-
-//   @include mobile() {
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-// }
-
-// .hInfoArea {
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: flex-end;
-
-//   @include mobile() {
-//     width: 100%;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-// }
-// .hWrapper {
-//   margin: 1.5% 0;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-// }
-
-// .hTitleArea {
-//   position: relative;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: flex-start;
-//   margin-bottom: 2rem;
-
-//   @include mobile() {
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-// }
-
-// .hInfoArea {
-//   width: 100%;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: flex-end;
-
-//   @include mobile() {
-//     width: 100%;
-//     flex-direction: column;
-//     justify-content: center;
-//   }
-// }

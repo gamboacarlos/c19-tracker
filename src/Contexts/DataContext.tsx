@@ -7,17 +7,22 @@ type Props = {
   children: ReactNode;
 };
 
-export interface WorldTodayData {
-  today_new_confirmed: number;
-  today_new_deaths: number;
-  today_new_recovered: number;
-  today_open_cases: number;
-  yesterday_confirmed: number;
+export interface Country {
+  country: string;
+}
 
-  // todayData: Array<WorldTodayData>;
+export interface TodayCountryData {
+  [name: string]: number;
+}
+
+export interface WorldTodayData {
+  [name: string]: number;
 }
 export interface ContextType {
   todayData: WorldTodayData;
+  // todayCountry: TodayCountryData;
+  // getCountryInfo: () => Promise<void>;
+  // setCountry: React.Dispatch<React.SetStateAction<Country>>;
 }
 
 // useContext
@@ -27,19 +32,21 @@ export const DataContext = React.createContext({} as ContextType);
 export const useData = () => React.useContext(DataContext);
 
 // date generator/////////////////////
-const date = moment().format('YYYY-MM-DD');
-// const date = '2021-03-05';
+// const date = moment().format('YYYY-MM-DD');
+const date = '2021-03-06';
 
 // Main Component ////////////////////////////////////
 export const AppContext: FC<Props> = ({ children }) => {
   const [todayData, setTodayData] = useState({} as WorldTodayData);
+  // const [country, setCountry] = useState({} as Country);
+  // const [todayCountry, setTodayCountry] = useState({} as TodayCountryData);
 
   useEffect(() => {
     const apiUrl = `https://api.covid19tracking.narrativa.com/api/${date}`;
     async function worldTodayData() {
       const apiFecth = await fetch(apiUrl);
-      const response = await apiFecth.json();
-      setTodayData(response.total);
+      const { total } = await apiFecth.json();
+      setTodayData(total);
     }
     worldTodayData();
   }, []);
