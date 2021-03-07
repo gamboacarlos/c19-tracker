@@ -1,11 +1,11 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
 
   output: {
-    assetModuleFilename: 'images/[hash][ext][query]'
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
 
   module: {
@@ -16,59 +16,57 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/'
-        },
+            outputPath: 'fonts/',
+          },
         },
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: "asset/resource"
+        type: 'asset/resource',
       },
       {
         test: /\.s?css$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: "" }
-          }, 
+            options: { publicPath: '' },
+          },
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true
-            }
+              modules: true,
+            },
           },
           'resolve-url-loader',
           'postcss-loader',
-          'sass-loader'
+          'sass-loader',
         ],
       },
       {
         test: /\.(ts||tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader'
-        }
+          loader: 'ts-loader',
+        },
       },
       {
         test: /\.(js||jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 
   plugins: [
-    new MiniCssExtractPlugin(), 
-    new HtmlWebpackPlugin(
-      { template: './public/index.html' }
-    )
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({ template: './public/index.html' }),
   ],
 
   devtool: 'inline-source-map',
@@ -76,7 +74,7 @@ module.exports = {
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000
+    maxAssetSize: 512000,
   },
 
   devServer: {
@@ -84,5 +82,5 @@ module.exports = {
     host: '0.0.0.0',
     port: 8080,
     disableHostCheck: true,
-  }
-}
+  },
+};

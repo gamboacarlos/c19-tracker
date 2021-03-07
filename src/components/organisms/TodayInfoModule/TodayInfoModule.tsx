@@ -6,12 +6,7 @@ import { InfoLine } from '../../molecules';
 import styles from './TodayInfoModule.module.scss';
 
 const TodayInfoModule: FC = () => {
-  const {
-    today_new_confirmed,
-    today_new_deaths,
-    today_new_recovered,
-    today_open_cases,
-  } = useData();
+  const { todayData } = useData();
 
   return (
     <div className={styles.moduleWrapper}>
@@ -22,10 +17,10 @@ const TodayInfoModule: FC = () => {
           <hr />
         </div>
       </div>
-      <InfoLine name="New confirmed" data={today_new_confirmed} />
-      <InfoLine name="New deaths" data={today_new_deaths} />
-      <InfoLine name="New recovered" data={today_new_recovered} />
-      <InfoLine name="Open Cases" data={today_open_cases} />
+      <InfoLine name="New confirmed" data={todayData.today_new_confirmed} />
+      <InfoLine name="New deaths" data={todayData.today_new_deaths} />
+      <InfoLine name="New recovered" data={todayData.today_new_recovered} />
+      <InfoLine name="Open Cases" data={todayData.today_open_cases} />
     </div>
   );
 };
