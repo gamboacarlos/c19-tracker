@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import React, { FC } from 'react';
-import { useData } from '../../../Contexts/DataContext';
+import { useData } from '../../../contexts/DataContext';
 import { PrimaryTitle } from '../../atoms';
 import { InfoLine } from '../../molecules';
 import styles from './TodayInfoModule.module.scss';
@@ -21,7 +21,7 @@ const TodayInfoModule: FC = () => {
       <InfoLine name="New recovered" data={todayData.today_new_recovered} />
       <InfoLine name="Open Cases" data={todayData.today_open_cases} />
       <InfoLine name="Total Recovered" data={todayData.today_recovered} />
-      <InfoLine name="Total Deaths" data={todayData.today_deaths} />
+      <InfoLine name="Total Deaths" data={todayData.name} />
     </div>
   );
 };

@@ -8,7 +8,12 @@ type Props = {
 
 const Input: FC<Props> = ({ type, placeholder }) => {
   return (
-    <input type={type} className={styles.input} placeholder={placeholder} />
+    <input
+      type={type}
+      className={styles.input}
+      placeholder={placeholder}
+      id="input"
+    />
   );
 };
 

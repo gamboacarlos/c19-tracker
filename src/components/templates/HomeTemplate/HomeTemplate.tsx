@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { Layout } from '..';
+import { useData } from '../../../contexts/DataContext';
 import { MainTitle } from '../../atoms';
 import { MainDate, NarrativaMention, SearchField } from '../../molecules';
-import { TodayInfoModule } from '../../organisms';
+import { CountryInfoModule, TodayInfoModule } from '../../organisms';
 import styles from './HomeTemplate.module.scss';
 
 type Props = {
@@ -10,13 +11,14 @@ type Props = {
 };
 
 const HomeTemplate: FC<Props> = ({ mainTitleData }) => {
+  const { switchData } = useData();
   return (
     <Layout>
       <div className={styles.hWrapper}>
         <MainTitle>{mainTitleData}</MainTitle>
         <MainDate />
         <SearchField />
-        <TodayInfoModule />
+        {switchData ? <CountryInfoModule /> : <TodayInfoModule />}
         <NarrativaMention />
       </div>
     </Layout>
