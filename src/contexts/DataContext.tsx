@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable camelcase */
@@ -16,8 +18,6 @@ type Props = {
 
 // useContext
 export const DataContext = React.createContext({} as ContextType);
-
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const useData = () => React.useContext(DataContext);
 
 // date generator/////////////////////
@@ -29,6 +29,7 @@ export const AppContext: FC<Props> = ({ children }) => {
   const [countriesData, setCountriesData] = useState<CountriesData>();
   const [countryInfo, setCountryInfo] = useState({} as CountryTodayData);
   const [switchData, setSwitchData] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     async function worldTodayData() {
@@ -40,15 +41,21 @@ export const AppContext: FC<Props> = ({ children }) => {
     }
     worldTodayData();
   }, []);
+
   // Get country data///////////
   const getCountryData = async (name: string) => {
+    if (countriesData![name] === undefined) {
+      setError(true);
+      return;
+    }
+    setError(false);
     setCountryInfo(countriesData![name]);
     setSwitchData(true);
   };
 
   return (
     <DataContext.Provider
-      value={{ todayData, countryInfo, getCountryData, switchData }}
+      value={{ todayData, countryInfo, getCountryData, switchData, error }}
     >
       {children}
     </DataContext.Provider>

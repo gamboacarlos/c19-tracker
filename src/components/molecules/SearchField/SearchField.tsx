@@ -1,30 +1,35 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-unused-expressions */
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { useData } from '../../../contexts/DataContext';
-import { Input, PrimaryButton, PrimaryTitle } from '../../atoms';
+import { Error, Input, PrimaryButton, PrimaryTitle } from '../../atoms';
 import styles from './SearchField.module.scss';
 
-const SearchField: FC = () => {
+type Props = {
+  error: boolean;
+};
+const SearchField: FC<Props> = ({ error }) => {
   const { getCountryData } = useData();
-
-  const [countryName, setCountryName] = useState<string>('');
-
-  const input = document.getElementById('input');
-  input?.addEventListener('change', (event: any) => {
-    getCountryData(event.target.value);
-  });
 
   const form = document.getElementById('form');
   form?.addEventListener('submit', event => {
     event.preventDefault();
+    input.value = '';
+  });
+
+  const input: any = document.getElementById('input');
+  input?.addEventListener('change', (event: any) => {
+    getCountryData(event.target.value);
   });
 
   return (
     <div className={styles.sFieldWrapper}>
-      <PrimaryTitle>Search by country</PrimaryTitle>
+      <div className={styles.sTitleWrapper}>
+        <PrimaryTitle>Search by country</PrimaryTitle>
+        {error && <Error>INFO NOT AVAILABLE</Error>}
+      </div>
       <form id="form" className={styles.sInputs}>
-        <Input type="text" />
+        <Input type="text" placeholder="country name..." />
         <PrimaryButton>GO</PrimaryButton>
       </form>
       <div className={styles.warningText}>

@@ -11,13 +11,13 @@ type Props = {
 };
 
 const HomeTemplate: FC<Props> = ({ mainTitleData }) => {
-  const { switchData } = useData();
+  const { switchData, error } = useData();
   return (
     <Layout>
       <div className={styles.hWrapper}>
         <MainTitle>{mainTitleData}</MainTitle>
         <MainDate />
-        <SearchField />
+        <SearchField error={error} />
         {switchData ? <CountryInfoModule /> : <TodayInfoModule />}
         <NarrativaMention />
       </div>

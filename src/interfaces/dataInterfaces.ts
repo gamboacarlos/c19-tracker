@@ -15,6 +15,7 @@ export interface ContextType {
   todayData: WorldTodayData;
   countryInfo: CountryTodayData;
   switchData: boolean;
+  error: boolean;
   getCountryData: (name: string) => Promise<void>;
   // setCountryData: React.Dispatch<React.SetStateAction<Country>>;
 }

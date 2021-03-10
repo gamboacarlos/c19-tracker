@@ -4,7 +4,8 @@
 $text: hsl(0, 0%, 10%);
 $primary: hsl(130, 100%, 84%);
 $secundary: hsl(69, 100%, 74%);
-$grey: hsl(0, 0%, 93%);
+$error: tomato;
+$grey: hsl(150, 15%, 60%);
 
 //Fonts
 @include font('Roboto-Black', '../fonts/Roboto/Roboto-Black.woff', 'woff', '900');

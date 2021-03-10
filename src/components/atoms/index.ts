@@ -1,3 +1,4 @@
+export { default as Error } from './Error/Error';
 export { default as Logo } from './Logo/Logo';
 export { default as BodyText } from './BodyText/BodyText';
 export { default as PrimaryButton } from './PrimaryButton/PrimaryButton';
