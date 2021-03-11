@@ -6,6 +6,10 @@
   flex-direction: column;
   justify-content: space-between;
   grid-area: iModule;
+  padding: 1.5rem;
+  background-color: hsla(126, 100%, 73%, 0.507);
+  border-left: .1rem solid #82df8b ;
+  border-top: .1rem solid #82df8b
 }
 .infoTitle {
   width: 100%;

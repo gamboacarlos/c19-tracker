@@ -46,6 +46,9 @@ export const AppContext: FC<Props> = ({ children }) => {
   const getCountryData = async (name: string) => {
     if (countriesData![name] === undefined) {
       setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 3000);
       return;
     }
     setError(false);

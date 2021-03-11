@@ -1,17 +1,16 @@
 @import './../../../styles/variables.scss';
 
 .errorWrapper {
-  width: 12.8rem;
-  height: 2.7rem;
-  border: 2px solid $error;
+  width: 14.2rem;
+  height: 2.4rem;
+  background-color: $error;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   p {
-    @include bodyText($primaryFontBold, 1.2rem);
-    line-height: 0.8rem;
-    color: $error;
+    @include bodyText($primaryFontBlack, 1.3rem);
+    color: #75ff83;
   }
 }
