@@ -46,6 +46,7 @@ const SearchField: FC<Props> = ({ error }) => {
           of reality.
         </p>
       </div>
+      <img src={require('../../../../public/images/map2.png')} alt="world" />
     </div>
   );
 };

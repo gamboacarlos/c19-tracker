@@ -9,7 +9,7 @@
   line-height: 9rem;
   letter-spacing: -0.3rem;
   grid-area: mTitle;
-
+  
   p {
     @include mobile() {
       margin-right: 1.5rem;

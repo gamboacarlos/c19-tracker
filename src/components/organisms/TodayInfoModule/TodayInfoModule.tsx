@@ -21,7 +21,7 @@ const TodayInfoModule: FC = () => {
       <InfoLine name="New recovered" data={todayData.today_new_recovered} />
       <InfoLine name="Open Cases" data={todayData.today_open_cases} />
       <InfoLine name="Total Recovered" data={todayData.today_recovered} />
-      <InfoLine name="Total Deaths" data={todayData.name} />
+      <InfoLine name="Total Deaths" data={todayData.today_deaths} />
     </div>
   );
 };
