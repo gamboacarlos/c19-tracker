@@ -1,3 +1,4 @@
+export { default as Animation } from './Animation/Animation';
 export { default as Error } from './Error/Error';
 export { default as Logo } from './Logo/Logo';
 export { default as BodyText } from './BodyText/BodyText';

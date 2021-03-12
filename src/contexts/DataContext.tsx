@@ -11,6 +11,7 @@ import {
   CountryTodayData,
   WorldTodayData,
 } from '../interfaces/dataInterfaces';
+import { textTransform } from '../hooks/hooks';
 
 type Props = {
   children: ReactNode;
@@ -44,21 +45,29 @@ export const AppContext: FC<Props> = ({ children }) => {
 
   // Get country data///////////
   const getCountryData = async (name: string) => {
-    if (countriesData![name] === undefined) {
+    const cName = textTransform(name);
+    if (countriesData![cName] === undefined) {
       setError(true);
       setTimeout(() => {
         setError(false);
       }, 3000);
+
       return;
     }
     setError(false);
-    setCountryInfo(countriesData![name]);
+    setCountryInfo(countriesData![cName]);
     setSwitchData(true);
   };
 
   return (
     <DataContext.Provider
-      value={{ todayData, countryInfo, getCountryData, switchData, error }}
+      value={{
+        todayData,
+        countryInfo,
+        getCountryData,
+        switchData,
+        error,
+      }}
     >
       {children}
     </DataContext.Provider>

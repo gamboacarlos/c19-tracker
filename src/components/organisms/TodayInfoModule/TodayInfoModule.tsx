@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+import { motion } from 'framer-motion';
 import React, { FC } from 'react';
 import { useData } from '../../../contexts/DataContext';
 import { PrimaryTitle } from '../../atoms';
@@ -8,7 +9,22 @@ import styles from './TodayInfoModule.module.scss';
 const TodayInfoModule: FC = () => {
   const { todayData } = useData();
   return (
-    <div className={styles.moduleWrapper}>
+    <motion.div
+      className={styles.moduleWrapper}
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          opacity: 0,
+        },
+        visible: {
+          opacity: 1,
+          transition: {
+            delay: 0.4,
+          },
+        },
+      }}
+    >
       <div className={styles.infoTitle}>
         <PrimaryTitle>World Today</PrimaryTitle>
         <div className={styles.titleDecoration}>
@@ -22,7 +38,7 @@ const TodayInfoModule: FC = () => {
       <InfoLine name="Open Cases" data={todayData.today_open_cases} />
       <InfoLine name="Total Recovered" data={todayData.today_recovered} />
       <InfoLine name="Total Deaths" data={todayData.today_deaths} />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn add dat-fns
+  /usr/bin/node /usr/bin/yarn add framermotion
 
 PATH: 
   /home/carlos/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/dat-fns: Not found
+  Error: https://registry.yarnpkg.com/framermotion: Not found
       at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140662:22)
       at Request.emit (node:events:378:20)
@@ -80,6 +80,7 @@ npm manifest:
       "webpack-dev-server": "^3.11.2"
     },
     "dependencies": {
+      "moment": "^2.29.1",
       "react": "^17.0.1",
       "react-dom": "^17.0.1",
       "react-icons": "^4.2.0"
@@ -4228,6 +4229,11 @@ Lockfile:
     integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
     dependencies:
       minimist "^1.2.5"
+  
+  moment@^2.29.1:
+    version "2.29.1"
+    resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+    integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
   
   ms@2.0.0:
     version "2.0.0"
