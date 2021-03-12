@@ -36,7 +36,11 @@ export function textTransform(countryName: string) {
       return 'Japan';
     case 'Korea':
       return 'Korea, South';
-    case 'Korea del sur':
+    case 'South korea':
+      return 'Korea, South';
+    case 'Corea':
+      return 'Korea, South';
+    case 'Corea del sur':
       return 'Korea, South';
     case 'Holanda':
       return 'Netherlands';
