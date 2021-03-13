@@ -4,6 +4,8 @@ export function textTransform(countryName: string) {
   switch (firstToUpperCase) {
     case 'España':
       return 'Spain';
+    case 'Brasil':
+      return 'Brazil';
     case 'Alemania':
       return 'Germany';
     case 'Suecia':
