@@ -9,6 +9,7 @@ type Props = {
 };
 
 const InfoLine: FC<Props> = ({ name, data }) => {
+  const formatedData = new Intl.NumberFormat("de-DE").format(data)
   return (
     <motion.div
       className={styles.infoWrapper}
@@ -30,7 +31,7 @@ const InfoLine: FC<Props> = ({ name, data }) => {
         <MdTexture size="1.7rem" />
         <p>{name}</p>
       </div>
-      <p>{data}</p>
+      <p>{formatedData}</p>
     </motion.div>
   );
 };
