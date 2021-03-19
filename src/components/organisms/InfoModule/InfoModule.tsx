@@ -9,9 +9,10 @@ import styles from './InfoModule.module.scss';
 interface Props {
   data: WorldTodayData;
   name: Name;
+  title?: string;
 }
 
-const TodayInfoModule: FC<Props> = ({ data, name }) => {
+const TodayInfoModule: FC<Props> = ({ data, name, title }) => {
   return (
     <motion.div
       className={styles.moduleWrapper}
@@ -30,9 +31,7 @@ const TodayInfoModule: FC<Props> = ({ data, name }) => {
       }}
     >
       <div className={styles.infoTitle}>
-        <PrimaryTitle>
-          {data.name === 'Total' ? 'World Today' : `${data.name} Today`}
-        </PrimaryTitle>
+        <PrimaryTitle>{title || `${data.name} Today`}</PrimaryTitle>
         <div className={styles.titleDecoration}>
           <hr />
           <hr />

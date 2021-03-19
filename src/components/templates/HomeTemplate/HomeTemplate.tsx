@@ -38,7 +38,7 @@ const HomeTemplate: FC<Props> = ({
         {switchData ? (
           <InfoModule name={name} data={CountryData} />
         ) : (
-          <InfoModule name={name} data={WorldData} />
+          <InfoModule title="World Today" name={name} data={WorldData} />
         )}
         <NarrativaMention />
       </div>
