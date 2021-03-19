@@ -3,6 +3,9 @@
 export interface CountryTodayData {
   [name: string]: any;
 }
+export interface Name {
+  [name: string]: string;
+}
 export interface CountriesData {
   [name: string]: CountryTodayData;
 }
@@ -17,5 +20,4 @@ export interface ContextType {
   switchData: boolean;
   error: boolean;
   getCountryData: (name: string) => Promise<void>;
-  // setCountryData: React.Dispatch<React.SetStateAction<Country>>;
 }

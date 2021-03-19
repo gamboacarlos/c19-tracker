@@ -1,16 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-unused-expressions */
 import React, { FC } from 'react';
-import { useData } from '../../../contexts/DataContext';
 import { Error, Input, PrimaryButton, PrimaryTitle } from '../../atoms';
 import styles from './SearchField.module.scss';
 
 type Props = {
   error: boolean;
+  getCountryData: (name: string) => Promise<void>;
 };
-const SearchField: FC<Props> = ({ error }) => {
-  const { getCountryData } = useData();
-
+const SearchField: FC<Props> = ({ error, getCountryData }) => {
   const form = document.getElementById('form');
   form?.addEventListener('submit', event => {
     event.preventDefault();

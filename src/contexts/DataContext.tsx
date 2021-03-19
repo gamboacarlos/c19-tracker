@@ -1,8 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable camelcase */
 import React, { FC, ReactNode, useEffect, useState } from 'react';
 import moment from 'moment';
 import {
