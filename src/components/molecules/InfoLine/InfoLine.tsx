@@ -9,7 +9,7 @@ type Props = {
 };
 
 const InfoLine: FC<Props> = ({ name, data }) => {
-  const formatedData = new Intl.NumberFormat("de-DE").format(data)
+  const formatedData = new Intl.NumberFormat('de-DE').format(data);
   return (
     <motion.div
       className={styles.infoWrapper}

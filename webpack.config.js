@@ -66,7 +66,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new HtmlWebpackPlugin({ template: './public/index.html', favicon: "./public/images/favicon.png" }),
   ],
 
   devtool: 'inline-source-map',
