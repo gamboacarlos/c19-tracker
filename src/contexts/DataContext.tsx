@@ -8,7 +8,7 @@ import {
   CountryTodayData,
   WorldTodayData,
 } from '../interfaces/dataInterfaces';
-import { textTransform } from '../hooks/hooks';
+import { textTransform } from '../utils/textTransform';
 
 type Props = {
   children: ReactNode;
