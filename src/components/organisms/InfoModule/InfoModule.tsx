@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { motion } from 'framer-motion';
 import React, { FC } from 'react';
 import { WorldTodayData, Name } from '../../../interfaces/dataInterfaces';

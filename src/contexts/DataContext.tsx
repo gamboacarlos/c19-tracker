@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { FC, ReactNode, useEffect, useState } from 'react';
 import moment from 'moment';
 import {

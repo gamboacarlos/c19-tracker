@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export interface CountryTodayData {
-  [name: string]: any;
+  [name: string]: string | number;
 }
 export interface Name {
   [name: string]: string;
